@@ -1,0 +1,2 @@
+common game theory states that a 'robot vs player' game implements the Minimax algorithm
+there should be three game modes: easy, medium, hard
