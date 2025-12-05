@@ -1,6 +1,6 @@
 // function: clear grid of any images in any grid cells
 function resetGrid() {
-    // select all cells inside the grid
+    // select all 9 cells inside the grid
     const gameContainer = document.querySelector('.game');
     const cells = gameContainer.querySelectorAll('.cell'); 
 
