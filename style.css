@@ -1,1 +1,143 @@
+* {
+    font-variation-settings: "slnt" 0, "wdth" 100, "CTRS" 0;
+    font-family: "Science Gothic", sans-serif;
+    text-shadow: #b7f1e933 0px 0px 8px;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+}
 
+body {
+    background-color: #181825;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #ffffff;
+    display: flex;
+}
+
+main {
+    flex: 1;
+}
+
+h1,
+h2 {
+    color: #00bfae;
+}
+
+hr {
+    background: linear-gradient(90deg, #00bfae 0%, #008c7a 100%);
+    margin: 20px auto;
+    max-width: 360px;
+    opacity: 0.85;
+    border: none;
+    height: 2px;
+    width: 100%;
+}
+
+button {
+    box-shadow: 0 4px 0 #008c7a, 0px 2px 8px #00bfae33;
+    transition: all 0.1s ease;
+    background-color: #00bfae;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: #181825;
+    cursor: pointer;
+    border: none;
+    user-select: none; 
+}
+
+button:hover {
+    box-shadow: 0 6px 0 #008c7a, 0 4px 12px #00bfae55;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+button.pressed {
+    background-color: #008c7a !important;
+    box-shadow: 0 0 0 #008c7a inset !important;
+    transform: translateY(4px) !important;
+    color: #ffffff;
+}
+
+button.pressed:hover {
+    box-shadow: 0 0 0 #008c7a inset !important;
+    transform: translateY(4px) !important;
+}
+
+.game {
+    grid-template-columns: repeat(3, 120px);
+    justify-self: center;
+    position: relative;
+    margin: 20px auto;
+    display: grid;
+    gap: 0;
+}
+
+.cell {
+    border: 1px solid #008c7a;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 100px;
+    overflow: hidden;
+    font-size: 50px;
+    height: 100px;
+}
+
+.cell img {
+    animation: pop 0.3s ease;
+    pointer-events: none;
+    object-fit: contain;
+    height: 70%;
+    width: 70%;
+}
+
+.drag-source-container {     
+    justify-content: center;
+    margin-top: 30px;
+    display: flex;
+    padding: 20px;
+    gap: 40px;
+}
+
+.drag-source {
+    transition: transform 0.2s;
+    height: 80px;
+    cursor: grab;
+    width: 80px;
+}
+
+.drag-source:active {
+    transform: scale(0.9);
+    cursor: grabbing;
+}
+
+.drag-source:hover {
+    transform: scale(1.1);
+}
+
+#reset-btn {
+    background-color: #dd0202;
+    box-shadow: 0 4px 0 #cc0000, 0px 2px 8px #ff333355;
+    transition: box-shadow 0.1s, transform 0.1s, background-color 0.1s;
+}
+
+#reset-btn:hover {
+    box-shadow: 0 6px 0 #cc0000, 0 4px 12px #ff333377;
+    color: #ffffff;
+}
+
+#reset-btn:active {
+    box-shadow: 0 2px 0 #740000 inset;
+    transform: translateY(2px);
+    background-color: #740000;
+}
+
+footer {
+    background: transparent;
+    text-align: center;
+    margin-top: auto;
+    padding: 36px 0;
+}

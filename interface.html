@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+    <title> XO & U </title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <header>
+        <h1>XO & U</h1>
+        <h3>Think you can win?<br id="caption">Show me how.</h3>
+    </header>
+
+    <hr>
+
+    <main>
+        <div class="buttons">
+            <h3>Select a game mode:</h3>
+            <button>EASY</button>
+            <button>MEDIUM</button>
+            <button>HARD</button>
+        </div>
+
+        <div class="game"> <!--iterative initialization of div elements in javascript--> </div>
+
+        <div class="reset">
+            <button id="reset-btn" onclick="location.reload();">RESET</button>
+        </div>
+
+        <div class="drag-source-container">
+            <img src="letter-x.png" id="drag-x" class="drag-source" draggable="true" ondragstart="whileDrag(event)" alt="X">
+            <img src="letter-o.png" id="drag-o" class="drag-source" draggable="true" ondragstart="whileDrag(event)" alt="O">
+        </div>
+    </main>
+
+    <footer>
+        &copy; <span id="year"></span> XO & U BY SP
+        <script>
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
+    </footer>
+
+</body>
+
+</html>
