@@ -9,6 +9,7 @@
 }
 
 body {
+    transition: background-color 0.8s ease;
     background-color: #181825;
     flex-direction: column;
     min-height: 100vh;
@@ -37,25 +38,25 @@ hr {
 
 button {
     box-shadow: 0 4px 0 #008c7a, 0px 2px 8px #00bfae33;
-    transition: all 0.1s ease;
     background-color: #00bfae;
+    transition: all 0.1s ease;
     padding: 10px 20px;
     border-radius: 4px;
+    user-select: none;
     color: #181825;
     cursor: pointer;
     border: none;
-    user-select: none; 
 }
 
 button:hover {
     box-shadow: 0 6px 0 #008c7a, 0 4px 12px #00bfae55;
-    color: #ffffff;
     transform: translateY(-2px);
+    color: #ffffff;
 }
 
 button.pressed {
-    background-color: #008c7a !important;
     box-shadow: 0 0 0 #008c7a inset !important;
+    background-color: #008c7a !important;
     transform: translateY(4px) !important;
     color: #ffffff;
 }
@@ -119,9 +120,9 @@ button.pressed:hover {
 }
 
 #reset-btn {
-    background-color: #dd0202;
-    box-shadow: 0 4px 0 #cc0000, 0px 2px 8px #ff333355;
     transition: box-shadow 0.1s, transform 0.1s, background-color 0.1s;
+    box-shadow: 0 4px 0 #cc0000, 0px 2px 8px #ff333355;
+    background-color: #dd0202;
 }
 
 #reset-btn:hover {
@@ -131,8 +132,16 @@ button.pressed:hover {
 
 #reset-btn:active {
     box-shadow: 0 2px 0 #740000 inset;
-    transform: translateY(2px);
     background-color: #740000;
+    transform: translateY(2px);
+}
+
+#game-status {
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 20px;
+    min-height: 50px;
 }
 
 footer {
