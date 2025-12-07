@@ -1,6 +1,3 @@
-// global variable: define array to track the current state of the board
-let grid;
-
 // function: update the board state array based off current grid cell images
 function updateGrid() {
     const cells = document.querySelectorAll('.cell');
@@ -46,7 +43,7 @@ function resetGrid() {
     // Clear the status message
     const statusDisplay = document.getElementById("game-status");
     statusDisplay.innerHTML = "...";
-    statusDisplay.style.color = "#888888";
+    statusDisplay.style.color = "#FFFFFF";
 }
 
 // function: check the grid for a win condition
@@ -104,7 +101,7 @@ function checkWin() {
         return;
     } else {
         statusDisplay.innerHTML = "...";
-        statusDisplay.style.color = "#888888";
+        statusDisplay.style.color = "#FFFFFF";
         return;
     }
 }
@@ -172,7 +169,7 @@ function whileDrag(event) {
     
     // update status to moving (white)
     const statusDisplay = document.getElementById("game-status");
-    statusDisplay.style.color = "#ffffff";
+    statusDisplay.style.color = "#FFFFFF";
 
     // check the alt tag to see if it is X or O
     const piece = event.target.alt; 
@@ -185,7 +182,7 @@ function endDrag(event) {
     const statusDisplay = document.getElementById("game-status");
     if (!statusDisplay.innerHTML.includes("WINS") && !statusDisplay.innerHTML.includes("DRAW")) {
         statusDisplay.innerHTML = "...";
-        statusDisplay.style.color = "#888888";
+        statusDisplay.style.color = "#FFFFFF";
     }
 }
 
@@ -231,8 +228,8 @@ function main() {
 
     // set initial status display
     const statusDisplay = document.getElementById("game-status");
-    statusDisplay.innerHTML = "...";
-    statusDisplay.style.color = "#888888";
+    statusDisplay.innerHTML = "Start Game...";
+    statusDisplay.style.color = "#FFFFFF";
 
     // check if cells already exist to prevent re-creation
     const gameContainer = document.querySelector('.game');
@@ -261,6 +258,9 @@ function main() {
         button.onclick = clickButton;
     }
 }
+
+// global variable: define array to track the current state of the board
+let grid;
 
 // the one and only... main().
 main();
