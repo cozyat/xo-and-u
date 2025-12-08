@@ -81,7 +81,7 @@ function checkWin() {
         console.log("Winner: " + winner);
         statusDisplay.innerHTML = winner + " WINS!";
         statusDisplay.style.color = "#00ff00";
-        return; 
+        return;
     }
 
     // check for stalemate (draw)
@@ -228,7 +228,7 @@ function main() {
 
     // set initial status display
     const statusDisplay = document.getElementById("game-status");
-    statusDisplay.innerHTML = "Start Game...";
+    statusDisplay.innerHTML = "...";
     statusDisplay.style.color = "#FFFFFF";
 
     // check if cells already exist to prevent re-creation
